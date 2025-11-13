@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Maple Leaf -->
+  <path d="M16 4 L17.6 7.2 L20.8 6.8 L19.2 10 L22.4 11.6 L19.2 13.2 L20.8 16.4 L17.6 16 L16 19.2 L14.4 16 L11.2 16.4 L12.8 13.2 L9.6 11.6 L12.8 10 L11.2 6.8 L14.4 7.2 Z" fill="#E53E3E"/>
+  
+  <!-- Stem -->
+  <rect x="15.6" y="19.2" width="0.8" height="4.8" fill="#E53E3E"/>
+  
+  <!-- Camera Aperture -->
+  <circle cx="16" cy="11.6" r="2.8" fill="none" stroke="white" stroke-width="0.3"/>
+  <circle cx="16" cy="11.6" r="0.6" fill="white"/>
+</svg>

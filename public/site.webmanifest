@@ -1,0 +1,17 @@
+{
+  "name": "Photobooth Canada",
+  "short_name": "Photobooth CA",
+  "description": "Premium photo booth rentals across Canada for weddings, corporate events, and parties",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/images/1.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

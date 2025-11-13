@@ -1,0 +1,57 @@
+{
+  "homepage": {
+    "heroTitle": "Capture Unforgettable",
+    "heroSubtitle": "Moments in GTA",
+    "heroDescription": "Premium photo booth experiences for weddings, corporate events, and celebrations",
+    "welcomeMessage": "🎉 Welcome to Photobooth Canada! 🎉",
+    "welcomeTagline": "\"Where Every Click Creates a Memory\"",
+    "openAirImage": "blob:http://localhost:3000/9129c83a-9ac9-47f1-9e01-82a7a820d56d",
+    "mirrorImage": "blob:http://localhost:3000/9129c83a-9ac9-47f1-9e01-82a7a820d56d",
+    "video360Image": "blob:http://localhost:3000/9129c83a-9ac9-47f1-9e01-82a7a820d56d",
+    "heroBackgroundImage": "blob:http://localhost:3000/9129c83a-9ac9-47f1-9e01-82a7a820d56d"
+  },
+  "services": {
+    "openAir": {
+      "title": "Open Air Classic Photo Booth",
+      "description": "Ultimate customization with backdrops, props, and unlimited prints",
+      "features": [
+        "Unlimited 4×6 Prints",
+        "Digital Photos",
+        "On-Site Attendant"
+      ],
+      "basePrice": 478
+    },
+    "mirror": {
+      "title": "Mirror Photo Booth",
+      "description": "HD touchscreen mirror with emojis, stickers, and virtual props",
+      "features": [
+        "HD Touch Screen",
+        "Emojis & Stickers",
+        "Virtual Props"
+      ],
+      "basePrice": 599
+    },
+    "video360": {
+      "title": "360 Video Booth",
+      "description": "TikTok-ready 360° videos with slow-mo and disco lights",
+      "features": [
+        "TikTok Ready",
+        "Disco Lights",
+        "Bubble Gun"
+      ],
+      "basePrice": 499
+    }
+  },
+  "company": {
+    "name": "Photobooth Canada",
+    "tagline": "Creating unforgettable memories across Canada",
+    "phone": "1-800-PHOTOBOOTH",
+    "email": "info@photoboothcanada.com",
+    "address": "Serving all major cities across Canada"
+  },
+  "seo": {
+    "defaultTitle": "Photobooth Canada - Premium Photo Booth Rentals",
+    "defaultDescription": "Professional photo booth rentals across Canada. Open Air, Mirror, and 360 booths for weddings, corporate events, and parties.",
+    "keywords": "photo booth rental, wedding photo booth, corporate events, party rental, GTA photo booth"
+  }
+}

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://photoboothcanada.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /test-*
+
+# Allow important pages
+Allow: /quote
+Allow: /layouts
+Allow: /blog
+Allow: /services
+Allow: /cities
+Allow: /about
+Allow: /faqs
+
+# Crawl delay
+Crawl-delay: 1
