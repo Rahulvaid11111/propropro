@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import VideoBackground from './VideoBackground';
 
 const CitiesServiceArea = () => {
   const cities = [
@@ -62,21 +63,13 @@ const CitiesServiceArea = () => {
 
   return (
     <section className="relative py-20 overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/videos/background.mov" type="video/quicktime" />
-          <source src="/videos/background.mp4" type="video/mp4" />
-        </video>
-        {/* Black fade overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
+      {/* Video Background with Fallback */}
+      <VideoBackground 
+        videoSrc="/videos/background.mov"
+        fallbackImage="/images/mirror-booth-red-carpet.jpg"
+        overlay={true}
+        overlayOpacity={0.6}
+      />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

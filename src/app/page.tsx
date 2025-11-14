@@ -8,6 +8,7 @@ import Script from 'next/script';
 import Head from 'next/head';
 import AwardBadges from '../../components/AwardBadges';
 import CitiesServiceArea from '../../components/CitiesServiceArea';
+import VideoBackground from '../../components/VideoBackground';
 // import ContactForm from '../../components/ContactForm';
 
 export default function Home() {
@@ -183,21 +184,13 @@ export default function Home() {
       <div className="min-h-screen">
         {/* Hero Section */}
         <section ref={heroRef} className="relative py-16 md:py-24 flex items-center justify-center overflow-hidden">
-          {/* Video Background */}
-          <div className="absolute inset-0 z-0">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src="/videos/background.mov" type="video/quicktime" />
-              <source src="/videos/background.mp4" type="video/mp4" />
-            </video>
-            {/* Black fade overlay */}
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
+          {/* Video Background with Fallback */}
+          <VideoBackground 
+            videoSrc="/videos/background.mov"
+            fallbackImage="/images/open-air-photobooth-enclosure.jpg"
+            overlay={true}
+            overlayOpacity={0.6}
+          />
 
           {/* Hero Content */}
           <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
@@ -331,12 +324,16 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="group bg-white overflow-hidden hover:shadow-lg transition-all duration-500 border border-gray-100"
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden bg-gray-200">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwABmQA/9k="
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <div className="absolute top-4 right-4">
@@ -494,12 +491,16 @@ export default function Home() {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
                   >
-                    <div className="aspect-square relative">
+                    <div className="aspect-square relative bg-gray-200">
                       <Image
                         src={image.src}
                         alt={image.alt}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwABmQA/9k="
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
