@@ -2,11 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import AdminLayout from '../../../components/admin/AdminLayout';
-import ContentEditor from '../../../components/admin/ContentEditor';
-import ImageManager from '../../../components/admin/ImageManager';
-import BlogManager from '../../../components/admin/BlogManager';
+
+const ContentEditor = dynamic(() => import('../../../components/admin/ContentEditor'), {
+  ssr: false,
+});
+
+const ImageManager = dynamic(() => import('../../../components/admin/ImageManager'), {
+  ssr: false,
+});
+
+const BlogManager = dynamic(() => import('../../../components/admin/BlogManager'), {
+  ssr: false,
+});
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('content');

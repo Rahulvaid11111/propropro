@@ -1,7 +1,12 @@
 'use client';
 
-import AdminLayout from '../../../components/admin/AdminLayout';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import AdminLayout from '../../../components/admin/AdminLayout';
+
+const DynamicAdminLayout = dynamic(() => import('../../../components/admin/AdminLayout'), {
+  ssr: false,
+});
 
 export default function AdminSettingsPage() {
   const [settings, setSettings] = useState({

@@ -1,7 +1,8 @@
 'use client';
 
-import AdminLayout from '../../../components/admin/AdminLayout';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import AdminLayout from '../../../components/admin/AdminLayout';
 
 export default function AdminServicesPage() {
   const [services, setServices] = useState([
