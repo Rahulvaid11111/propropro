@@ -9,6 +9,7 @@ import Head from 'next/head';
 import AwardBadges from '../../components/AwardBadges';
 import CitiesServiceArea from '../../components/CitiesServiceArea';
 import VideoBackground from '../../components/VideoBackground';
+import { blogPosts } from '../../lib/blogPosts';
 // import ContactForm from '../../components/ContactForm';
 
 export default function Home() {
@@ -297,6 +298,60 @@ export default function Home() {
 
         {/* Award Badges Section */}
         <AwardBadges />
+
+        {/* TEDx Sponsorship Feature Section */}
+        <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl overflow-hidden"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="relative h-64 lg:h-auto">
+                  <Image
+                    src="/eventgallery/tedx-background.jpg"
+                    alt="TEDxUofT 2025 Sponsorship"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    FEATURED
+                  </div>
+                </div>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="mb-4">
+                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                      Corporate Sponsorship
+                    </span>
+                  </div>
+                  <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
+                    Proudly Sponsoring TEDxUofT 2025
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    We are thrilled to announce our sponsorship of TEDxUofT 2025, bringing innovative photo booth experiences to one of Toronto's most inspiring events.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link href="/blog/photobooth-canada-sponsors-tedxuoft-2025">
+                      <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300">
+                        Read Our Story
+                      </button>
+                    </Link>
+                    <Link href="/blog">
+                      <button className="border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-6 py-3 rounded-lg font-medium transition-colors duration-300">
+                        View All Posts
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Services Section */}
         <section ref={servicesRef} className="py-16 bg-gray-50">

@@ -1,13 +1,12 @@
 'use client';
 
-import { use } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { blogPosts } from '../../../../../lib/blogPosts';
 import { generateBlogContent } from '../../../../../lib/blogContent';
 
 export default function BlogPostPage({ params }) {
-  const { slug } = use(params);
+  const { slug } = params;
   const post = blogPosts.find(p => p.slug === slug);
   
   if (!post) {

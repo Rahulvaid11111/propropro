@@ -8,11 +8,13 @@ import { blogPosts, blogCategories } from '../../../../lib/blogPosts';
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  
   const filteredPosts = selectedCategory === 'All' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+    ? sortedPosts 
+    : sortedPosts.filter(post => post.category === selectedCategory);
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
+  const featuredPosts = sortedPosts.filter(post => post.featured);
 
   return (
     <div className="min-h-screen bg-white">
