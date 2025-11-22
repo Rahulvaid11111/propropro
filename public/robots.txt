@@ -4,20 +4,46 @@ Allow: /
 # Sitemap
 Sitemap: https://photoboothcanada.com/sitemap.xml
 
-# Disallow admin areas
+# Disallow admin and system areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /test-*
+Disallow: /.well-known/
+Disallow: /uploads/temp/
+Disallow: /private/
 
-# Allow important pages
+# Allow important pages for SEO
 Allow: /quote
-Allow: /layouts
+Allow: /contact
 Allow: /blog
+Allow: /blog/*
 Allow: /services
+Allow: /services/*
+Allow: /locations
+Allow: /locations/*
 Allow: /cities
 Allow: /about
-Allow: /faqs
 
-# Crawl delay
+# Allow static assets
+Allow: /images/
+Allow: /eventgallery/
+Allow: /_next/static/
+Allow: /favicon.ico
+Allow: /manifest.json
+
+# Crawl delay (1 second between requests)
 Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2

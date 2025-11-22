@@ -84,7 +84,10 @@ export default function BlogPostPage({ params }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="prose prose-lg max-w-none"
+            className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-900 prose-strong:text-gray-900"
+            style={{
+              color: '#111827' // Force dark gray color
+            }}
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </div>

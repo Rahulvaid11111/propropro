@@ -60,5 +60,5 @@ export default async function CityPage({ params }) {
     );
   }
 
-  return <MasterServicePage city={cityInfo.name} />;
+  return <MasterServicePage city={cityInfo.name} cityInfo={cityInfo} />;
 }
