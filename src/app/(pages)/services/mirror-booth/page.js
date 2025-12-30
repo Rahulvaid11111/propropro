@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-// import QuoteCalculator from '../../../../components/QuoteCalculator';
 import Head from 'next/head';
 
 export default function MirrorBoothPage() {
@@ -135,7 +134,7 @@ export default function MirrorBoothPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="#quote"
+                  href="/contact"
                   className="bg-gray-900 hover:bg-gray-800 text-white px-10 py-4 text-sm uppercase tracking-wider font-medium transition-all duration-300"
                 >
                   Get Instant Quote
@@ -322,7 +321,7 @@ export default function MirrorBoothPage() {
                 </ul>
 
                 <Link
-                  href="#quote"
+                  href="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     pkg.popular
                       ? 'bg-purple-600 hover:bg-purple-700 text-black'

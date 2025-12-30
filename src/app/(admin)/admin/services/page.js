@@ -8,11 +8,59 @@ export default function AdminServicesPage() {
   const [services, setServices] = useState([
     {
       id: 'openAir',
-      title: 'Open Air Classic Photo Booth',
+      title: 'Open Air Photobooth',
       description: 'Ultimate customization with backdrops, props, and unlimited prints',
       features: ['Custom Backdrops', 'Unlimited Prints', 'Props Included'],
-      basePrice: 478,
-      image: '/images/open-air-photobooth-enclosure.jpg'
+      basePrice: 378,
+      image: '/Services/openair.png'
+    },
+    {
+      id: 'vintageClassic',
+      title: 'Vintage Classic Photobooth',
+      description: 'Nostalgic charm meets modern technology with authentic vintage styling',
+      features: ['Authentic Vintage Design', 'Classic Photo Strips', 'Vintage Props'],
+      basePrice: 978,
+      image: '/Services/Vintage.png'
+    },
+    {
+      id: 'magnet',
+      title: 'Magnet Photobooth',
+      description: 'Create lasting memories with custom photo magnets',
+      features: ['Instant Photo Magnets', 'High-Quality Backing', 'Custom Templates'],
+      basePrice: 890,
+      image: '/Services/Magnet.png'
+    },
+    {
+      id: 'keychain',
+      title: 'Keychain Photobooth',
+      description: 'Portable memories with custom photo keychains',
+      features: ['Photo Keychains', 'Durable Construction', 'Custom Shapes'],
+      basePrice: 890,
+      image: '/Services/Keychain.png'
+    },
+    {
+      id: 'sportscard',
+      title: 'Sportscard Photobooth',
+      description: 'Create custom trading cards featuring your guests',
+      features: ['Custom Trading Cards', 'Sports Templates', 'Personalized Stats'],
+      basePrice: 890,
+      image: '/Services/Tradingcards.png'
+    },
+    {
+      id: 'corporate',
+      title: 'Corporate PhotoBooth',
+      description: 'Professional branding and networking opportunities',
+      features: ['Corporate Branding', 'Professional Backgrounds', 'LinkedIn Photos'],
+      basePrice: 0,
+      image: '/Services/Corporate.png'
+    },
+    {
+      id: 'brandActivations',
+      title: 'Brand Activations',
+      description: 'Custom branded experiences that amplify your brand message',
+      features: ['Full Brand Customization', 'Social Media Integration', 'Analytics'],
+      basePrice: 0,
+      image: '/Services/Brandactivation.png'
     },
     {
       id: 'mirror',

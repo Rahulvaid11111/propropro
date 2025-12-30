@@ -12,14 +12,74 @@
   },
   "services": {
     "openAir": {
-      "title": "Open Air Classic Photo Booth",
+      "title": "Open Air Photobooth",
       "description": "Ultimate customization with backdrops, props, and unlimited prints",
       "features": [
         "Unlimited 4×6 Prints",
         "Digital Photos",
         "On-Site Attendant"
       ],
-      "basePrice": 478
+      "basePrice": 378
+    },
+    "vintageClassic": {
+      "title": "Vintage Classic Photobooth",
+      "description": "Nostalgic charm meets modern technology with authentic vintage styling",
+      "features": [
+        "Authentic Vintage Design",
+        "Classic Photo Strips",
+        "Vintage Props Collection"
+      ],
+      "basePrice": 978
+    },
+    "magnet": {
+      "title": "Magnet Photobooth",
+      "description": "Create lasting memories with custom photo magnets",
+      "features": [
+        "Instant Photo Magnets",
+        "High-Quality Magnetic Backing",
+        "Custom Design Templates"
+      ],
+      "basePrice": 890
+    },
+    "keychain": {
+      "title": "Key Chain Photobooth",
+      "description": "Portable memories with custom photo keychains",
+      "features": [
+        "Instant Photo Keychains",
+        "Durable Acrylic Construction",
+        "Custom Shapes Available"
+      ],
+      "basePrice": 890
+    },
+    "sportscard": {
+      "title": "Sportscard Photobooth",
+      "description": "Create custom trading cards featuring your guests",
+      "features": [
+        "Custom Trading Cards",
+        "Professional Sports Templates",
+        "Personalized Stats & Info"
+      ],
+      "basePrice": 890
+    },
+    "corporate": {
+      "title": "Corporate PhotoBooth",
+      "description": "Professional branding and networking opportunities",
+      "features": [
+        "Custom Corporate Branding",
+        "Professional Backgrounds",
+        "LinkedIn-Ready Photos"
+      ],
+      "basePrice": 0
+    },
+    "brandActivations": {
+      "title": "Brand Activations",
+      "description": "Custom branded experiences that amplify your brand message",
+      "features": [
+        "Full Brand Customization",
+        "Social Media Integration",
+        "Analytics & Reporting"
+      ],
+      "basePrice": 0
     },
     "mirror": {
       "title": "Mirror Photo Booth",
@@ -40,6 +100,61 @@
         "Bubble Gun"
       ],
       "basePrice": 499
+    }
+  },
+  "addons": {
+    "luxuryMetallic": {
+      "title": "Luxury Metallic Paper",
+      "description": "Premium metallic finish paper for stunning prints",
+      "price": 75
+    },
+    "luxuryPearl": {
+      "title": "Luxury Pearl Paper", 
+      "description": "Elegant pearl finish paper adds sophistication",
+      "price": 85
+    },
+    "prints5x7": {
+      "title": "5x7 Prints with Luxury Backdrops",
+      "description": "Larger prints with exclusive luxury backdrop collection",
+      "price": 125
+    }
+  },
+  "backdrops": {
+    "luxuryRed": {
+      "title": "Luxury Crimson Elegance",
+      "color": "Red",
+      "description": "Opulent crimson backdrop with rich velvet textures and golden accents",
+      "price": 150
+    },
+    "luxuryGreen": {
+      "title": "Emerald Sophistication", 
+      "color": "Green",
+      "description": "Luxurious emerald green backdrop with botanical elegance and metallic highlights",
+      "price": 140
+    },
+    "luxuryBlue": {
+      "title": "Royal Sapphire Grandeur",
+      "color": "Blue", 
+      "description": "Majestic royal blue backdrop with celestial patterns and silver embellishments",
+      "price": 160
+    },
+    "luxuryYellow": {
+      "title": "Golden Radiance Collection",
+      "color": "Yellow",
+      "description": "Brilliant golden yellow backdrop with sunburst patterns and champagne accents",
+      "price": 145
+    },
+    "luxuryBabyPink": {
+      "title": "Blush Rose Opulence",
+      "color": "Baby Pink",
+      "description": "Delicate blush pink backdrop with rose gold details and soft romantic textures",
+      "price": 135
+    },
+    "luxuryWhite": {
+      "title": "Platinum Pure Elegance",
+      "color": "White",
+      "description": "Pristine white backdrop with platinum accents and crystal-like textures",
+      "price": 130
     }
   },
   "company": {

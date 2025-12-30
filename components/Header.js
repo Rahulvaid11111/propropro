@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const servicesDropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,31 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close dropdown when clicking outside or pressing Escape
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape') {
+        setIsServicesOpen(false);
+      }
+    };
+
+    if (isServicesOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscapeKey);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [isServicesOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -28,6 +54,12 @@ const Header = () => {
 
   const serviceLinks = [
     { name: 'Open Air Photobooth', href: '/services/open-air-photobooth' },
+    { name: 'Vintage Classic Photobooth', href: '/services/vintage-classic-photobooth' },
+    { name: 'Magnet Photobooth', href: '/services/magnet-photobooth' },
+    { name: 'Keychain Photobooth', href: '/services/keychain-photobooth' },
+    { name: 'Sportscard Photobooth', href: '/services/sportscard-photobooth' },
+    { name: 'Corporate PhotoBooth', href: '/services/corporate-photobooth' },
+    { name: 'Brand Activations', href: '/services/brand-activations' },
     { name: 'Mirror Booth', href: '/services/mirror-booth' },
     { name: '360 Photo Booth', href: '/services/360-photo-booth' },
   ];
@@ -65,7 +97,7 @@ const Header = () => {
 
 
               {/* Services Dropdown */}
-              <div className="relative">
+              <div className="relative" ref={servicesDropdownRef}>
                 <button
                   onClick={toggleServices}
                   className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
@@ -93,33 +125,28 @@ const Header = () => {
                       className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
                     >
                       <div className="py-1">
-                        <Link 
-                          href="/services/open-air-photobooth" 
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          Open Air Photobooth
-                        </Link>
-                        <Link 
-                          href="/services/mirror-booth" 
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          Mirror Booth
-                        </Link>
-                        <Link 
-                          href="/services/360-photo-booth" 
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          360 Photo Booth
-                        </Link>
+                        {serviceLinks.map((service) => (
+                          <Link 
+                            key={service.name}
+                            href={service.href} 
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
 
+              <Link 
+                href="/luxury-backdrops" 
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Luxury Backdrops
+              </Link>
               <Link 
                 href="/faqs" 
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
@@ -250,6 +277,13 @@ const Header = () => {
                   </AnimatePresence>
                 </div>
 
+                <Link
+                  href="/luxury-backdrops"
+                  className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Luxury Backdrops
+                </Link>
                 <Link
                   href="/faqs"
                   className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"

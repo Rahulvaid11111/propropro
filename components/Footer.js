@@ -137,6 +137,54 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
+                  href="/services/vintage-classic-photobooth" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  Vintage Classic Photobooth
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/services/magnet-photobooth" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  Magnet Photobooth
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/services/keychain-photobooth" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  Keychain Photobooth
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/services/sportscard-photobooth" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  Sportscard Photobooth
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/services/corporate-photobooth" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  Corporate PhotoBooth
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/services/brand-activations" 
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  Brand Activations
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href="/services/mirror-booth" 
                   className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
                 >

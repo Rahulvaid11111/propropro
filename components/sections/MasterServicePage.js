@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import QuoteCalculator from '../QuoteCalculator';
 import CitiesServiceArea from '../CitiesServiceArea';
 
 const MasterServicePage = ({ city, cityInfo }) => {
@@ -34,8 +33,56 @@ const MasterServicePage = ({ city, cityInfo }) => {
         title: 'Open Air Photo Booth',
         description: openAirDescriptions[cityHash % openAirDescriptions.length],
         features: ['Custom Backdrops', 'Unlimited Props', 'Instant Prints', '4-Hour Rental'],
-        price: 'From $478',
-        image: '/images/open-air-photobooth-enclosure.jpg'
+        price: 'From $378',
+        image: '/Services/openair.png'
+      },
+      {
+        id: 'vintage-classic',
+        title: 'Vintage Classic Photobooth',
+        description: 'Nostalgic charm meets modern technology with authentic vintage styling and classic photo strips.',
+        features: ['Authentic Vintage Design', 'Classic Photo Strips', 'Vintage Props', 'Retro Experience'],
+        price: 'From $978',
+        image: '/Services/Vintage.png'
+      },
+      {
+        id: 'magnet-booth',
+        title: 'Magnet Photobooth',
+        description: 'Create lasting memories with custom photo magnets that guests can take home and display.',
+        features: ['Instant Photo Magnets', 'High-Quality Backing', 'Custom Templates', 'Practical Keepsakes'],
+        price: 'From $890',
+        image: '/Services/Magnet.png'
+      },
+      {
+        id: 'keychain-booth',
+        title: 'Keychain Photobooth',
+        description: 'Portable memories! Create custom photo keychains that guests can carry everywhere.',
+        features: ['Photo Keychains', 'Durable Construction', 'Custom Shapes', 'Portable Memories'],
+        price: 'From $890',
+        image: '/Services/Keychain.png'
+      },
+      {
+        id: 'sportscard-booth',
+        title: 'Sportscard Photobooth',
+        description: 'Create custom trading cards featuring your guests! Perfect for sports events and themed parties.',
+        features: ['Custom Trading Cards', 'Sports Templates', 'Personalized Stats', 'Championship Feel'],
+        price: 'From $890',
+        image: '/Services/Tradingcards.png'
+      },
+      {
+        id: 'corporate-booth',
+        title: 'Corporate PhotoBooth',
+        description: 'Professional branding and networking opportunities with custom corporate photo experiences.',
+        features: ['Corporate Branding', 'Professional Backgrounds', 'LinkedIn Photos', 'Networking Features'],
+        price: 'Contact Us',
+        image: '/Services/Brandactivation.png'
+      },
+      {
+        id: 'brand-activations',
+        title: 'Brand Activations',
+        description: 'Custom branded experiences that amplify your brand message and create shareable social content.',
+        features: ['Full Brand Customization', 'Social Media Integration', 'Analytics', 'Marketing Power'],
+        price: 'Contact Us',
+        image: '/Services/Corporate.png'
       },
       {
         id: 'mirror-booth',
@@ -196,7 +243,7 @@ const MasterServicePage = ({ city, cityInfo }) => {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
               >
-                <div className="aspect-video overflow-hidden">
+                <div className="aspect-[5/7] overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -260,20 +307,6 @@ const MasterServicePage = ({ city, cityInfo }) => {
         </div>
       </section>
 
-      {/* Quote Calculator Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">
-              Get Your {city} Photo Booth Quote
-            </h2>
-            <p className="text-lg text-gray-600 font-light">
-              Get instant pricing for your {city} celebration in just 4 easy steps
-            </p>
-          </div>
-          <QuoteCalculator />
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">

@@ -16,18 +16,18 @@ export async function generateMetadata({ params }) {
   
   return {
     title: `Photo Booth Rental in ${cityInfo.name} | Photobooth Canada`,
-    description: `Premium photo booth rentals in ${cityInfo.name}. Open Air, Mirror, and 360 booths for weddings, corporate events, and parties. Get your instant quote today!`,
+    description: `Premium photo booth rentals in ${cityInfo.name}. Open Air, Vintage Classic, Magnet, Keychain, Sportscard, Corporate, Brand Activations, Mirror, and 360 booths for weddings, corporate events, and parties. Get your instant quote today!`,
     keywords: `photo booth rental ${cityInfo.name}, wedding photo booth ${cityInfo.name}, corporate event photo booth, party rental ${cityInfo.name}, GTA photo booth`,
     openGraph: {
       title: `Photo Booth Rental in ${cityInfo.name} | Photobooth Canada`,
-      description: `Premium photo booth rentals in ${cityInfo.name}. Open Air, Mirror, and 360 booths for weddings, corporate events, and parties.`,
+      description: `Premium photo booth rentals in ${cityInfo.name}. Open Air, Vintage Classic, Magnet, Keychain, Sportscard, Corporate, Brand Activations, Mirror, and 360 booths for weddings, corporate events, and parties.`,
       type: 'website',
       locale: 'en_CA',
     },
     twitter: {
       card: 'summary_large_image',
       title: `Photo Booth Rental in ${cityInfo.name} | Photobooth Canada`,
-      description: `Premium photo booth rentals in ${cityInfo.name}. Get your instant quote today!`,
+      description: `Premium photo booth rentals in ${cityInfo.name}. 9 different booth types available. Get your instant quote today!`,
     },
     alternates: {
       canonical: `/locations/${city}`,

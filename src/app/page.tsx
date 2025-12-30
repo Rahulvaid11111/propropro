@@ -33,11 +33,62 @@ export default function Home() {
   const services = [
     {
       id: 'open-air',
-      title: 'Open Air Photo Booth',
+      title: 'Open Air Photobooth',
       description: 'Ultimate customization with backdrops, props, and unlimited prints for your special event.',
-      price: 'From $478',
-      image: '/images/open-air-photobooth-enclosure.jpg',
-      features: ['Custom Backdrops', 'Unlimited Props', 'Instant Prints', '4-Hour Rental']
+      price: 'From $378',
+      image: '/Services/openair.png',
+      features: ['Custom Backdrops', 'Unlimited Props', 'Instant Prints', '4-Hour Rental'],
+      popular: true
+    },
+    {
+      id: 'vintage-classic',
+      title: 'Vintage Classic Photobooth',
+      description: 'Nostalgic charm meets modern technology with authentic vintage styling and classic photo strips.',
+      price: 'From $978',
+      image: '/Services/Vintage.png',
+      features: ['Authentic Vintage Design', 'Classic Photo Strips', 'Vintage Props', 'Retro Experience']
+    },
+    {
+      id: 'magnet-booth',
+      title: 'Magnet Photobooth',
+      description: 'Create lasting memories with custom photo magnets that guests can take home and display.',
+      price: 'From $890',
+      image: '/Services/Magnet.png',
+      features: ['Instant Photo Magnets', 'High-Quality Backing', 'Custom Templates', 'Practical Keepsakes']
+    },
+    {
+      id: 'keychain-booth',
+      title: 'Keychain Photobooth',
+      description: 'Portable memories! Create custom photo keychains that guests can carry everywhere.',
+      price: 'From $890',
+      image: '/Services/Keychain.png',
+      features: ['Photo Keychains', 'Durable Construction', 'Custom Shapes', 'Portable Memories']
+    },
+    {
+      id: 'sportscard-booth',
+      title: 'Sportscard Photobooth',
+      description: 'Create custom trading cards featuring your guests! Perfect for sports events and themed parties.',
+      price: 'From $890',
+      image: '/Services/Tradingcards.png',
+      features: ['Custom Trading Cards', 'Sports Templates', 'Personalized Stats', 'Championship Feel']
+    },
+    {
+      id: 'corporate-booth',
+      title: 'Corporate PhotoBooth',
+      description: 'Professional branding and networking opportunities with custom corporate photo experiences.',
+      price: 'Contact Us',
+      image: '/Services/Brandactivation.png',
+      features: ['Corporate Branding', 'Professional Backgrounds', 'LinkedIn Photos', 'Networking Features'],
+      popular: true
+    },
+    {
+      id: 'brand-activations',
+      title: 'Brand Activations',
+      description: 'Custom branded experiences that amplify your brand message and create shareable social content.',
+      price: 'Contact Us',
+      image: '/Services/Corporate.png',
+      features: ['Full Brand Customization', 'Social Media Integration', 'Analytics', 'Marketing Power'],
+      popular: true
     },
     {
       id: 'mirror-booth',
@@ -84,36 +135,22 @@ export default function Home() {
 
   // Gallery images
   const galleryImages = [
-    { src: '/eventgallery/1PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/2PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/3PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/4PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/5PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/6PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/7PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/8PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/9PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/10PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/11PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/12PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/13PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/14PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/15PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/16PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/17PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/18PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/19PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/20PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/21PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/22PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/23PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/24PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/25PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/26PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/27PBC.jpg', alt: 'Photo Booth Event', category: 'parties' },
-    { src: '/eventgallery/28PBC.jpg', alt: 'Photo Booth Event', category: 'weddings' },
-    { src: '/eventgallery/29PBC.jpg', alt: 'Photo Booth Event', category: 'corporate' },
-    { src: '/eventgallery/30PBC.jpg', alt: 'Photo Booth Event', category: 'parties' }
+    { src: '/eventgallery1/1.png', alt: 'Photo Booth Event', category: 'weddings' },
+    { src: '/eventgallery1/2.png', alt: 'Photo Booth Event', category: 'corporate' },
+    { src: '/eventgallery1/3.png', alt: 'Photo Booth Event', category: 'parties' },
+    { src: '/eventgallery1/4.png', alt: 'Photo Booth Event', category: 'weddings' },
+    { src: '/eventgallery1/5.png', alt: 'Photo Booth Event', category: 'corporate' },
+    { src: '/eventgallery1/6.png', alt: 'Photo Booth Event', category: 'parties' },
+    { src: '/eventgallery1/7.png', alt: 'Photo Booth Event', category: 'weddings' },
+    { src: '/eventgallery1/8.png', alt: 'Photo Booth Event', category: 'corporate' },
+    { src: '/eventgallery1/9.png', alt: 'Photo Booth Event', category: 'parties' },
+    { src: '/eventgallery1/10.png', alt: 'Photo Booth Event', category: 'weddings' },
+    { src: '/eventgallery1/11.png', alt: 'Photo Booth Event', category: 'corporate' },
+    { src: '/eventgallery1/12.png', alt: 'Photo Booth Event', category: 'parties' },
+    { src: '/eventgallery1/13.png', alt: 'Photo Booth Event', category: 'weddings' },
+    { src: '/eventgallery1/14.png', alt: 'Photo Booth Event', category: 'corporate' },
+    { src: '/eventgallery1/15.png', alt: 'Photo Booth Event', category: 'parties' },
+    { src: '/eventgallery1/16.png', alt: 'Photo Booth Event', category: 'weddings' }
   ];
 
   const filteredImages = activeFilter === 'all' 
@@ -379,7 +416,7 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="group bg-white overflow-hidden hover:shadow-lg transition-all duration-500 border border-gray-100"
                 >
-                  <div className="relative h-64 overflow-hidden bg-gray-200">
+                  <div className="relative aspect-[5/7] overflow-hidden bg-gray-200">
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -410,7 +447,17 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Link href={`/services/${service.id === 'mirror-booth' ? 'mirror-booth' : service.id === '360-booth' ? '360-photo-booth' : 'open-air-photobooth'}`}>
+                    <Link href={`/services/${
+                      service.id === 'mirror-booth' ? 'mirror-booth' :
+                      service.id === '360-booth' ? '360-photo-booth' :
+                      service.id === 'vintage-classic' ? 'vintage-classic-photobooth' :
+                      service.id === 'magnet-booth' ? 'magnet-photobooth' :
+                      service.id === 'keychain-booth' ? 'keychain-photobooth' :
+                      service.id === 'sportscard-booth' ? 'sportscard-photobooth' :
+                      service.id === 'corporate-booth' ? 'corporate-photobooth' :
+                      service.id === 'brand-activations' ? 'brand-activations' :
+                      'open-air-photobooth'
+                    }`}>
                       <button className="w-full border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-6 py-3 text-sm uppercase tracking-wider font-medium transition-all duration-300">
                         Discover More
                       </button>

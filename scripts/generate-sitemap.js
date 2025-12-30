@@ -58,9 +58,58 @@ function generateSitemap() {
     <priority>0.8</priority>
   </url>
   
+  <url>
+    <loc>${baseUrl}/luxury-backdrops</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Service Pages -->
   <url>
     <loc>${baseUrl}/services/open-air-photobooth</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>${baseUrl}/services/vintage-classic-photobooth</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>${baseUrl}/services/magnet-photobooth</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>${baseUrl}/services/keychain-photobooth</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>${baseUrl}/services/sportscard-photobooth</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>${baseUrl}/services/corporate-photobooth</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>${baseUrl}/services/brand-activations</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -134,4 +183,4 @@ console.log(`✅ Sitemap generated successfully!`);
 console.log(`📍 ${cities.length} location pages included`);
 console.log(`📝 ${blogPosts.length} blog posts included`);
 console.log(`📄 Sitemap saved to: ${sitemapPath}`);
-console.log(`🔗 Total URLs: ${cities.length + blogPosts.length + 9} (locations + blogs + main pages)`);
+console.log(`🔗 Total URLs: ${cities.length + blogPosts.length + 16} (locations + blogs + main pages + services + backdrops)`);
